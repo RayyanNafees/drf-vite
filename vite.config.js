@@ -3,9 +3,8 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
 
-const frontend = '{{project_name}}/frontend'
 
-const root = path.resolve(__dirname, frontend);
+const root = path.resolve(__dirname, 'frontend');
 const base = '/static/frontend/';
 
 export default defineConfig({
@@ -14,14 +13,14 @@ export default defineConfig({
   
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, frontend,'/src')
+      '@': path.resolve(__dirname, 'frontend/src')
     },
   },
   
   plugins: [react()],
   
   build: {
-    outDir: path.resolve(__dirname, frontend, base),
+    outDir: path.resolve(__dirname, 'frontend', base),
     assetsDir: '.',
     emptyOutDir: true,
     rollupOptions: {
