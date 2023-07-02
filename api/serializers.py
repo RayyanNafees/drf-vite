@@ -1,11 +1,11 @@
 from rest_framework.serializers import ModelSerializer
-from .models import Lead
+from .models import Post
 
 
-class LeadSerializer(ModelSerializer):
+class PostSerializer(ModelSerializer):
     class Meta:
-        model = Lead
+        model = Post
         fields = "__all__"
 
 
-__all__ = ["LeadSerializer"]
+__all__ = ["PostSerializer"]

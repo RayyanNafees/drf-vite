@@ -1,10 +1,10 @@
-from .models import Lead
-from .serializers import LeadSerializer
+from .models import Post
+from .serializers import PostSerializer
 from rest_framework import viewsets, permissions
 
 
-class LeadViewset(viewsets.ModelViewSet):
-    serializer_class = LeadSerializer
+class PostViewset(viewsets.ModelViewSet):
+    serializer_class = PostSerializer
     permission_classes = [permissions.AllowAny]
 
-    queryset = Lead.objects.all()
+    queryset = Post.objects.all()
