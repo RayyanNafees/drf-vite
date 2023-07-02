@@ -5,7 +5,7 @@ import path from 'path';
 
 
 const root = path.resolve(__dirname, 'frontend');
-const base = '/static/frontend/';
+const base = 'static/frontend/';
 
 export default defineConfig({
   root,
